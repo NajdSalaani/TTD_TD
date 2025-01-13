@@ -40,6 +40,9 @@ class TestFuncs(unittest.TestCase):
         self.assertEqual(func1.est_liste_arithmetique([1]),False)
         self.assertEqual(func1.est_liste_arithmetique([1,2,-1]),False)
         self.assertEqual(func1.est_liste_arithmetique([1,2,3]),True)
+        self.assertEqual(func1.est_liste_arithmetique([1,2,3,4,5,6,7]),True)
+        self.assertEqual(func1.est_liste_arithmetique([1,-5,-11,-17]),True)
+        self.assertEqual(func1.est_liste_arithmetique([1,2,3,4,5,6,12]),False)
        
 
 if __name__ == '__main__':
