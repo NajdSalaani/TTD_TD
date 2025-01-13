@@ -30,7 +30,7 @@ class LIFO:
         self.queue = [] 
 
     def ajout(self, value):
-        print("pass")
+        self.queue.append(value)
        
 
     def retire(self):

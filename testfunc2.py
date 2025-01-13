@@ -29,7 +29,7 @@ class Test(unittest.TestCase):
         lifo.ajout(10)
         self.assertEqual(lifo.est_vide(),False)
         lifo.ajout(15)
-        self.assertEqual(fifo.queue,[10,15])
+        self.assertEqual(lifo.queue,[10,15])
         
 
 if __name__ == '__main__':
