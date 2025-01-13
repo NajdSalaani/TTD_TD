@@ -13,7 +13,9 @@ class FIFO:
         print("pass")
     
     def est_vide(self):
-        print("pass")
+        if self.queue == [] :
+            return True 
+        return False
 
     def size(self):
         print("pass")

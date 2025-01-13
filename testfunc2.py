@@ -5,7 +5,7 @@ class Test(unittest.TestCase):
     
     def test(self):
         fifo = FIFO()
-        self.assertTrue(fifo.queue == [])
+        self.assertEqual(fifo.est_vide(),True)
 
 
 if __name__ == '__main__':
