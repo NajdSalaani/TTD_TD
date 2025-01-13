@@ -16,21 +16,18 @@ def division(a, b):
         raise ValueError("Division par zéro impossible.")
     return a / b
 
-def puissance(a, b):
-    return a ** b
+def puissance(base, exposant):
+    if base < 0 and exposant < 1:
+        return "Erreur : Impossible de calculer une puissance fractionnaire pour un nombre négatif."
+    return base ** exposant
+
 
 def modulo(a, b):
     if b == 0:
         raise ValueError("Modulo par zéro impossible.")
     return a % b
     
-def calculer_racine_carree(num):
-    if num < 0:
-        return "Erreur : Impossible de calculer la racine carrée d'un nombre négatif."
-    return num ** 0.5
 
-def calculer_carre(num):
-    return num ** 2
 
 
 def calculator():
@@ -97,13 +94,13 @@ def advanced_calculator():
             continue
 
         if choix == "1":
-            result = calculer_racine_carree(num)
+            result = puissance(num,0.5)
             if isinstance(result, str):  # Vérifie si c'est une erreur
                 print(result)
             else:
                 print(f"Résultat de la racine carrée : {result}")
         elif choix == "2":
-            result = calculer_carre(num)
+            result = puissance(num,2)
             print(f"Résultat du carré : {result}")
 
 
