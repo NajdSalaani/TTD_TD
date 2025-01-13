@@ -10,7 +10,8 @@ class Test(unittest.TestCase):
         
         fifo.ajout(10)
         self.assertEqual(fifo.est_vide(),False)
-
+        fifo.ajout(15)
+        self.assertEqual(fifo.queue,[10,15])
 
 if __name__ == '__main__':
     unittest.main()
