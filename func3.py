@@ -23,6 +23,15 @@ def modulo(a, b):
     if b == 0:
         raise ValueError("Modulo par zéro impossible.")
     return a % b
+    
+def calculer_racine_carree(num):
+    if num < 0:
+        return "Erreur : Impossible de calculer la racine carrée d'un nombre négatif."
+    return num ** 0.5
+
+def calculer_carre(num):
+    return num ** 2
+
 
 def calculator():
     print("Bienvenue dans la calculatrice !")
@@ -69,7 +78,7 @@ def advanced_calculator():
     print("1. Calculer la racine carrée")
     print("2. Calculer le carré")
     print("3. Retour au menu principal")
-    
+
     while True:
         choix = input("Entrez votre choix (1-3) : ")
         if choix == "3":
@@ -78,7 +87,7 @@ def advanced_calculator():
         elif choix not in ["1", "2"]:
             print("Choix invalide. Veuillez entrer 1, 2 ou 3.")
             continue
-        
+
         num = input("Entrez un nombre : ")
         
         try:
@@ -88,14 +97,15 @@ def advanced_calculator():
             continue
 
         if choix == "1":
-            if num < 0:
-                print("Erreur : Impossible de calculer la racine carrée d'un nombre négatif.")
+            result = calculer_racine_carree(num)
+            if isinstance(result, str):  # Vérifie si c'est une erreur
+                print(result)
             else:
-                result = num ** 0.5
                 print(f"Résultat de la racine carrée : {result}")
         elif choix == "2":
-            result = num ** 2
+            result = calculer_carre(num)
             print(f"Résultat du carré : {result}")
+
 
 def main():
     while True:
