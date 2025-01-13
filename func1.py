@@ -16,4 +16,10 @@ def max_list_int(list_int):
                 list_int.remove(max_val)
         return max_values
 
-    
+   
+# Exercice 1.2
+
+# nombre premier 
+
+def est_premier(n):
+        return True 

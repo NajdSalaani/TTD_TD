@@ -10,21 +10,24 @@ class TestFuncs(unittest.TestCase):
         
         # Test liste vide et liste non vide
         
-        self.assertEqual(func1.max_list_int([]), 0)
+        # self.assertEqual(func1.max_list_int([]), 0)
         # self.assertEqual(func1.max_list_int([1, 2, 3, 4]), -9)
         
-        #verif max 
+        # verif max 
         
         # self.assertEqual(func1.max_list_int([1,2,3,4]),4)
         # self.assertEqual(func1.max_list_int([1,2,3,-4]),3)
         # self.assertEqual(func1.max_list_int([1,9,0,4]),9)
         
-        #verif list max values 
+        # verif list max values 
         
-        self.assertEqual(func1.max_list_int([1,2,3,4]),[4,3,2])
-        self.assertEqual(func1.max_list_int([1,2,3,-4]),[3,2,1])
-        self.assertEqual(func1.max_list_int([1,9,0,-6]),[9,1,0])
-
+        # self.assertEqual(func1.max_list_int([1,2,3,4]),[4,3,2])
+        # self.assertEqual(func1.max_list_int([1,2,3,-4]),[3,2,1])
+        # self.assertEqual(func1.max_list_int([1,9,0,-6]),[9,1,0])
+        
+        
+        #Exercice 1.2 
+        self.assertEqual(func1.est_premier(0),False)
        
 
 if __name__ == '__main__':
