@@ -39,6 +39,7 @@ class TestFuncs(unittest.TestCase):
         self.assertEqual(func1.est_liste_arithmetique([]),False)
         self.assertEqual(func1.est_liste_arithmetique([1]),False)
         self.assertEqual(func1.est_liste_arithmetique([1,2,-1]),False)
+        self.assertEqual(func1.est_liste_arithmetique([1,2,3]),True)
        
 
 if __name__ == '__main__':

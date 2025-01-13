@@ -38,5 +38,8 @@ def est_liste_arithmetique(liste):
     
     if len(liste) < 2:
         return False
+    diff_commune = liste[0] - liste[1]
+    if diff_commune != (liste[1] - liste[2] ) :
+        return False 
     return True 
     
