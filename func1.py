@@ -22,4 +22,6 @@ def max_list_int(list_int):
 # nombre premier 
 
 def est_premier(n):
-        return True 
+        if n <= 0 :
+            return False 
+        return True
