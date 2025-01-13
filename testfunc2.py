@@ -26,6 +26,11 @@ class Test(unittest.TestCase):
         self.assertEqual(lifo.est_vide(),True)
         self.assertEqual(lifo.size(), 0)
         
+        lifo.ajout(10)
+        self.assertEqual(lifo.est_vide(),False)
+        lifo.ajout(15)
+        self.assertEqual(fifo.queue,[10,15])
+        
 
 if __name__ == '__main__':
     unittest.main()
