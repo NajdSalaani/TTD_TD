@@ -32,6 +32,8 @@ class TestFuncs(unittest.TestCase):
         self.assertEqual(func1.est_premier(1),False)
         self.assertEqual(func1.est_premier(4),False)
         self.assertEqual(func1.est_premier(12),False)
+        self.assertEqual(func1.est_premier(3),True)
+        self.assertEqual(func1.est_premier(5),True)
        
 
 if __name__ == '__main__':

@@ -23,5 +23,9 @@ def max_list_int(list_int):
 
 def est_premier(n):
         if n <= 1 :
-            return False 
+            return False
+        # si n est divisible par un nombre entre 2 et la racine carrée de n alors pas premier 
+        for i in range(2, int(n**0.5) + 1):
+            if n % i == 0:
+                return False
         return True
