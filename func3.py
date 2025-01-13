@@ -151,5 +151,5 @@ def main():
         else:
             print("Choix invalide. Veuillez réessayer.")
 
-main()
+#main() pour pouvoir tester
 
