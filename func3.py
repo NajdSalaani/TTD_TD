@@ -1,5 +1,29 @@
 #Exercice 3 
 
+
+# Ajout de fonctions intermédiaires 
+def addition(a, b):
+    return a + b
+
+def soustraction(a, b):
+    return a - b
+
+def multiplication(a, b):
+    return a * b
+
+def division(a, b):
+    if b == 0:
+        raise ValueError("Division par zéro impossible.")
+    return a / b
+
+def puissance(a, b):
+    return a ** b
+
+def modulo(a, b):
+    if b == 0:
+        raise ValueError("Modulo par zéro impossible.")
+    return a % b
+
 def calculator():
     print("Bienvenue dans la calculatrice !")
     print("Options disponibles :")
@@ -20,40 +44,25 @@ def calculator():
             print("Choix invalide. Veuillez entrer un chiffre entre 1 et 7.")
             continue
 
-        num1 = input("Entrez le premier nombre : ")
-        num2 = input("Entrez le second nombre : ")
-
         try:
-            num1 = float(num1)
-            num2 = float(num2)
-        except ValueError:
-            print("Erreur : Vous devez entrer des nombres valides.")
-            continue
+            num1 = float(input("Entrez le premier nombre : "))
+            num2 = float(input("Entrez le second nombre : "))
 
-        if choix == "1":
-            result = num1 + num2
-            print(f"Résultat de l'addition : {result}")
-        elif choix == "2":
-            result = num1 - num2
-            print(f"Résultat de la soustraction : {result}")
-        elif choix == "3":
-            result = num1 * num2
-            print(f"Résultat de la multiplication : {result}")
-        elif choix == "4":
-            if num2 == 0:
-                print("Erreur : Division par zéro impossible.")
-            else:
-                result = num1 / num2
-                print(f"Résultat de la division : {result}")
-        elif choix == "5":
-            result = num1 ** num2
-            print(f"Résultat de la puissance : {result}")
-        elif choix == "6":
-            if num2 == 0:
-                print("Erreur : Modulo par zéro impossible.")
-            else:
-                result = num1 % num2
-                print(f"Résultat du modulo : {result}")
+            if choix == "1":
+                print(f"Résultat de l'addition : {addition(num1, num2)}")
+            elif choix == "2":
+                print(f"Résultat de la soustraction : {soustraction(num1, num2)}")
+            elif choix == "3":
+                print(f"Résultat de la multiplication : {multiplication(num1, num2)}")
+            elif choix == "4":
+                print(f"Résultat de la division : {division(num1, num2)}")
+            elif choix == "5":
+                print(f"Résultat de la puissance : {puissance(num1, num2)}")
+            elif choix == "6":
+                print(f"Résultat du modulo : {modulo(num1, num2)}")
+        except ValueError as e:
+            print(f"Erreur : {e}")
+
 
 def advanced_calculator():
     print("Options avancées :")
