@@ -35,5 +35,8 @@ def est_premier(n):
 # Liste arithmétique
 
 def est_liste_arithmetique(liste):
+    
+    if liste == []:
+        return 0
     return True 
     
