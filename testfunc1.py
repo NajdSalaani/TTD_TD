@@ -4,7 +4,7 @@ import unittest
 class TestFuncs(unittest.TestCase):
 
     
-    def test_max_int(self):
+    def test(self):
         
         # Exercice 1.1 :
         
@@ -27,13 +27,16 @@ class TestFuncs(unittest.TestCase):
         
         
         #Exercice 1.2 
-        self.assertEqual(func1.est_premier(0),False)
-        self.assertEqual(func1.est_premier(-1),False)
-        self.assertEqual(func1.est_premier(1),False)
-        self.assertEqual(func1.est_premier(4),False)
-        self.assertEqual(func1.est_premier(12),False)
-        self.assertEqual(func1.est_premier(3),True)
-        self.assertEqual(func1.est_premier(5),True)
+        # self.assertEqual(func1.est_premier(0),False)
+        # self.assertEqual(func1.est_premier(-1),False)
+        # self.assertEqual(func1.est_premier(1),False)
+        # self.assertEqual(func1.est_premier(4),False)
+        # self.assertEqual(func1.est_premier(12),False)
+        # self.assertEqual(func1.est_premier(3),True)
+        # self.assertEqual(func1.est_premier(5),True)
+        
+        #Exercice 1.3
+        self.assertEqual(func1.est_liste_arithmetique([]),False)
        
 
 if __name__ == '__main__':

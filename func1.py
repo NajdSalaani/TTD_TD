@@ -29,3 +29,11 @@ def est_premier(n):
             if n % i == 0:
                 return False
         return True
+        
+ # Exercice 1.3
+
+# Liste arithmétique
+
+def est_liste_arithmetique(liste):
+    return True 
+    
