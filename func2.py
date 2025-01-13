@@ -10,7 +10,7 @@ class FIFO:
        
 
     def retire(self):
-        print("pass")
+        return self.queue.pop(0)
     
     def est_vide(self):
         if self.queue == [] :
