@@ -18,5 +18,5 @@ class FIFO:
         return False
 
     def size(self):
-        print("pass")
+        return len(self.queue)
         
