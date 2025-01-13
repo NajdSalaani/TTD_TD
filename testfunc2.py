@@ -13,6 +13,12 @@ class Test(unittest.TestCase):
         fifo.ajout(15)
         self.assertEqual(fifo.queue,[10,15])
         self.assertEqual(fifo.size(), 2)
+        
+        fifo.retire()
+        self.assertEqual(fifo.queue,[15])
+        fifo.retire()
+        self.assertEqual(fifo.est_vide(),True)
+        
 
 if __name__ == '__main__':
     unittest.main()
