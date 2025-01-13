@@ -34,7 +34,7 @@ class LIFO:
        
 
     def retire(self):
-        print("pass")
+        return self.queue.pop()
     
     def est_vide(self):
         if self.queue == [] :
