@@ -36,7 +36,7 @@ def est_premier(n):
 
 def est_liste_arithmetique(liste):
     
-    if liste == []:
-        return 0
+    if len(liste) < 2:
+        return False
     return True 
     
