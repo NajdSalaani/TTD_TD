@@ -3,14 +3,27 @@ import unittest
 
 class TestFuncs(unittest.TestCase):
 
-    # Exercice 1.1
+    
     def test_max_int(self):
+        
+        # Exercice 1.1 :
+        
         # Test liste vide et liste non vide
+        
         self.assertEqual(func1.max_list_int([]), 0)
         # self.assertEqual(func1.max_list_int([1, 2, 3, 4]), -9)
-        self.assertEqual(func1.max_list_int([1,2,3,4]),4)
-        self.assertEqual(func1.max_list_int([1,2,3,-4]),3)
-        self.assertEqual(func1.max_list_int([1,9,0,4]),9)
+        
+        #verif max 
+        
+        # self.assertEqual(func1.max_list_int([1,2,3,4]),4)
+        # self.assertEqual(func1.max_list_int([1,2,3,-4]),3)
+        # self.assertEqual(func1.max_list_int([1,9,0,4]),9)
+        
+        #verif list max values 
+        
+        self.assertEqual(func1.max_list_int([1,2,3,4]),[4,3,2])
+        self.assertEqual(func1.max_list_int([1,2,3,-4]),[3,2,1])
+        self.assertEqual(func1.max_list_int([1,9,0,-6]),[9,1,0])
 
        
 

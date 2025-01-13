@@ -7,6 +7,13 @@ def max_list_int(list_int):
     if list_int == []:
         return 0
     else:
-        return max(list_int)
+        max_values = []
+        for _ in range(3):
+            if list_int:
+                # Trouver la plus grande valeur actuelle
+                max_val = max(list_int)
+                max_values.append(max_val)
+                list_int.remove(max_val)
+        return max_values
 
     
